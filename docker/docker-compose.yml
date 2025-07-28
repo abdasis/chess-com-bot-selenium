@@ -34,11 +34,12 @@ services:
   chess-com-bot:
     build: ..
     environment:
-      - elo_rating=-1
+      - elo_rating=1800
       - game_timer_ms=150000
-      - first_move_w=e2e4
+      - first_move_w=d2d4
       - hub_host=selenium-hub
       - hub_port=4444
+      - enable_move_delay=True
     depends_on:
       - selenium-hub
     networks:
